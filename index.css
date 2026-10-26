@@ -1,0 +1,113 @@
+:root {
+    --green: #abc270;
+    --yellow: #fec868;
+    --orange: #fda769;
+    --black: #473c33;
+    --white: #ede7f9;
+}
+
+body {
+    font-family: sans-serif;        
+    background: linear-gradient(90deg, #abc270, #fda769);        
+    color: var(--black);
+    padding: 30px;
+    text-align: center;
+}
+
+.container {
+    background-color: transparent;
+    max-width: 450px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 20px;
+    animation: container 4s infinite;
+}
+@keyframes container {
+    0%{box-shadow: 5px 5px 3px 0 var(--white);}
+    25%{box-shadow: 5px -5px 3px 0 var(--white);}
+    50%{box-shadow: -5px -5px 3px 0 var(--white);}
+    75%{box-shadow: -5px 5px 3px 0 var(--white);}
+    100%{box-shadow: 5px 5px 3px 0 var(--white);}
+}
+
+h2 {
+    color: var(--black);
+    margin-bottom: 0px;
+    animation: letter 2.5s infinite;
+    height: 50px;
+    line-height: 1;
+}
+p {
+    color: var(--black);
+    margin-top: -5px;
+    animation: letter 2.5s infinite;
+    height: 50px;
+    line-height: 1;
+}
+@keyframes letter {
+    0%{font-family: "Roboto Slab", serif;
+    font-weight: 100;}
+    50%{font-family: "Roboto", sans-serif;
+    font-weight: bolder;}
+    100%{font-family: "Roboto Slab", serif;
+    font-weight: 100;}
+}
+
+#searchBox {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: solid 2px var(--orange);
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: 0.2s;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%{transform: translateY(0);}
+    40%{transform: translateY(5px);}
+    60%{transform: translateY(-10px);}
+}
+#searchBox:focus {
+    border-color: var(--green);
+    outline: none;
+    animation: none;
+    transition: 1s;
+}
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.product-item {
+    padding: 12px 15px;
+    font-family: "Arimo", sans-serif;
+    background: var(--orange);
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 14px;
+}
+.product-item:hover {
+    background: linear-gradient(90deg, #ede7f9, #abc270);
+    color: var(--black);
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 var(--white);
+    transform: translateY(-8px);
+    transition: 0.25s;
+}
+
+img {
+    border-radius: 40px;
+    max-width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%{scale: 1;}
+    50%{scale: 1.1;}
+    100%{scale: 1;}
+}
